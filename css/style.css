@@ -258,7 +258,7 @@ color: #8f6b00;
 .sobre{
 flex-direction:column;
 background:#000000;
-color:#d6a401;
+color:#ffffff;
 padding-top: 30px;
 }
 
@@ -273,7 +273,7 @@ width:100%;
 margin:0 auto 40px auto;
 text-align:center;
 gap: 50px;
-color: #ffffff;
+color: #e0ac00;
 }
 
 .botao{
