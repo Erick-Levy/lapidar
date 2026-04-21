@@ -140,7 +140,7 @@ privilégio de morar em um projeto feito sob medida para as suas expectativas.
     <div class="video-container">
 
       <div class="video-box">
-        <video autoplay muted loop>
+        <video id="meuVideo">
           <source src="./imagens/videogeral.mp4" type="video/mp4" />
         </video>
       </div>
@@ -352,7 +352,15 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.fade-in, .fade-in1, .fade-in2').forEach((el) => {
   observer.observe(el);
 });
+</script>
 
+    <script>
+  const video = document.getElementById("meuVideo");
+
+  video.muted = true;
+  video.loop = true;
+
+  video.play();
 </script>
 
 </body>
