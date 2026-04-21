@@ -140,8 +140,8 @@ unindo a paz de um refúgio particular à conveniência de uma localização est
     <div class="video-container">
 
       <div class="video-box">
-        <video autoplay muted loop>
-          <source src="./imagens/videogeral.mp4" type="video/mp4" />
+        <video id="video" autoplay muted loop playsinline webkit-playsinline>
+        <source src="./imagens/videogeral.mp4" type="video/mp4">
         </video>
       </div>
 
@@ -266,7 +266,13 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.fade-in, .fade-in1, .fade-in2').forEach((el) => {
   observer.observe(el);
 });
+</script>
+<script>
+const video = document.getElementById("video");
 
+video.play().catch(() => {
+  document.addEventListener("touchstart", () => video.play(), { once: true });
+});
 </script>
 
 </body>
