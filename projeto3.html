@@ -123,8 +123,8 @@ que não abrem mão de qualidade de vida, privacidade e uma infraestrutura de la
     <div class="video-container">
 
       <div class="video-box">
-        <video autoplay muted loop>
-          <source src="./imagens/videogeral.mp4" type="video/mp4" />
+       <video id="video" autoplay muted loop playsinline webkit-playsinline>
+        <source src="./imagens/videogeral.mp4" type="video/mp4">
         </video>
       </div>
 
@@ -252,7 +252,13 @@ document.querySelectorAll('.fade-in, .fade-in1, .fade-in2').forEach((el) => {
 });
 
 </script>
+<script>
+const video = document.getElementById("video");
 
+video.play().catch(() => {
+  document.addEventListener("touchstart", () => video.play(), { once: true });
+});
+</script>
 </body>
 
 </html>
